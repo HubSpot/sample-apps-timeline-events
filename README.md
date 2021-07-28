@@ -9,18 +9,12 @@ This is a sample app for the HubSpot [client libraries](https://developers.hubsp
 3. Copy the .env.template file into a file named .env in the folder of the language you want to use. For example:
 
 ```bash
-cp node/.env.template node/.env
+cp ruby/.env.template ruby/.env
 ```
 
-5. Paste your HubSpot Developer API Key as the value for HUBSPOT_DEVELOPER_API_KEY in .env
+5. Specify data in .env
 
-6. Paste your HubSpot API Key as the value for HUBSPOT_API_KEY in .env
-
-7. Paste your HubSpot Application ID as the value for HUBSPOT_APPLICATION_ID in .env
-
-8. Paste your HubSpot Oauth Access Token as the value for HUBSPOT_ACCESS_TOKEN in .env
-
-9. Follow the language instructions on how to run. For example, if you want to run the Node server:
+6. Follow the language instructions on how to run. For example, if you want to run the Node server:
 
 ```
 cd node # there's a README in this folder with instructions
@@ -30,4 +24,5 @@ npm install
 
 ## Supported languages
 
+* [PHP](php/README.md)
 * [Ruby](ruby/README.md)
