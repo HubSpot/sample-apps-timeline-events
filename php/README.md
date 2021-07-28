@@ -1,6 +1,6 @@
-# HubSpot-php sample Timeline app
+# HubSpot-php timeline events sample app
 
-This is a sample app for the [hubspot-php SDK](../../../../).
+This is a sample app for the [hubspot-php SDK](https://github.com/HubSpot/hubspot-api-php).
 Currently, this app is focused on demonstrating of [Timeline API](https://developers.hubspot.com/docs/api/crm/extensions/timeline)
 integration with [Telegram](https://telegram.org/).
 
