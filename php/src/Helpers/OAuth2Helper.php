@@ -7,7 +7,7 @@ use Repositories\TokensRepository;
 
 class OAuth2Helper
 {
-    const APP_REQUIRED_SCOPES = ['contacts', 'timeline'];
+    const APP_REQUIRED_SCOPES = ['crm.objects.contacts.read', 'timeline'];
     const CALLBACK_PATH = '/oauth/callback';
     const SESSION_TOKENS_KEY = 'tokens';
 
@@ -49,7 +49,7 @@ class OAuth2Helper
             throw new \Exception('Please authorize via OAuth2');
         }
         if (time() > $tokens['expires_at']) {
-            $response = Factory::create()->auth()->oAuth()->defaultApi()->createToken(
+            $response = Factory::create()->auth()->oAuth()->tokensApi()->createToken(
                 'refresh_token',
                 null,
                 static::getRedirectUri(),

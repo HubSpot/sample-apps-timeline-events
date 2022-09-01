@@ -31,7 +31,7 @@ $hubSpot->crm()->contacts()->searchApi()->doSearch($searchRequest);
 <form id="search-form">
     <fieldset>
         <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
-        <input type="text" name="search" placeholder="Search by email.." id="search" value="<?php echo $_GET['search']; ?>">
+        <input type="text" name="search" placeholder="Search by email.." id="search" value="<?php echo $_GET['search'] ?? ''; ?>">
     </fieldset>
 </form>
 

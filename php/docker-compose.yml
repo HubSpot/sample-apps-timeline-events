@@ -2,6 +2,7 @@ version: '3.5'
 
 services:
     web:
+        container_name: php-timeline-events-web
         env_file:
             - .env
         build:
@@ -19,6 +20,7 @@ services:
             - ./src:/app/src
             - ./sql:/app/sql
     db:
+        container_name: php-timeline-events-db
         image: mysql:8.0
         command: mysqld --default-authentication-plugin=mysql_native_password
         volumes:
