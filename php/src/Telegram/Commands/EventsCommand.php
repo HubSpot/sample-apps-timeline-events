@@ -21,7 +21,7 @@ class EventsCommand extends SystemCommand
      *
      * @return ServerResponse
      */
-    public function execute()
+    public function execute(): ServerResponse
     {
         $message = $this->getMessage();
         $chatId = $message->getChat()->getId();
@@ -37,8 +37,9 @@ class EventsCommand extends SystemCommand
             return Request::sendMessage($data);
         }
 
-        TelegramBot::sendInvitation($invitation, $chatId);
         $this->createTimelineEvent($invitation['id']);
+
+        return TelegramBot::sendInvitation($invitation, $chatId);
     }
 
     protected function createTimelineEvent($invitationId)
